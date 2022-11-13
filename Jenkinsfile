@@ -18,12 +18,27 @@ pipeline {
             steps {
                 sh """mvn -version  """
                 sh """java -version """
+                sh """mvn package -e"""
             }
         }
         
         stage("MVN Clean"){
             steps {
-                sh """mvn clean """
+                sh """mvn clean -e """
+                
+            }
+        }
+
+         stage("MVN Compile"){
+            steps {
+                sh """mvn compile -e """
+                
+            }
+        }
+
+           stage("MVN install"){
+            steps {
+                sh """mvn install  """
                 
             }
         }
