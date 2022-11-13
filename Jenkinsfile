@@ -53,6 +53,12 @@ pipeline {
             }
         }
 
+        stage("DEPLOY with Nexus") {
+            steps { 
+                sh'mvn clean deploy -Dmaven.test.skip=true -Dresume=false'
+            }
+        }
+
     
         
         

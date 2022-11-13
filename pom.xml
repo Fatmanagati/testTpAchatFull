@@ -72,6 +72,15 @@
 		</dependency>
 	</dependencies>
 
+	<distributionManagement>
+		<repository>
+			<id>deploymentRepo</id>
+			<name>tpAchatProjet</name>
+			<url>http://172.20.10.6:8081/repository/tpAchatProjet/</url>
+		</repository>
+	
+	</distributionManagement>
+
 	<build>
 		<plugins>
 			<plugin>
